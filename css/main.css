@@ -1,62 +1,76 @@
 body{
     /* font-family: "raleway",sans-serif; */
-    font-family: 'Times New Roman', Times, serif;
-    background-image: url(../img/mainImg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /*
+     font family is defined in reset.css; 
+     body, body * {} overrights body {} >> i.e. if I want to change font-family in main css, then I have to add it to those elements (font-family will change only for those elements);
+      !!!!*/
     font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.containerHero{
-    display: inline-block;
-    /* background-color: red;     */
-    width: 600px;
-    padding: 2rem;
-    text-align: center; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
-
-    .containerHero > .logo{
-        display: inline-block;
-        /* background-color: rgb(25, 0, 255); */
-        padding: 2rem;  
-        width: 100px;
-    }
-
-    .containerHero > h1 {
-        display: inline-block;
+    .containerBgHero{
+        display:flex;
+        justify-content: center;
+        align-items: center;
         width:100%;
-        /* background-color: rgb(204, 27, 136);   */
-        font-size: 4rem;
-        font-weight: 900;
-
+        background-image: url(../img/mainImg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    .containerHero > p {
+    .containerHero{
         display: inline-block;
-        width:100%;
-        /* background-color: rgb(0, 255, 21);   */
-        color: grey;
-        font-size: 1.1rem;
-        padding-top:2rem;
-        padding-bottom:2rem;
+        width: 600px;
+        padding: 2rem;
+        text-align: center;     
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  */ /* sita naudojam praktiskai tik tuo atveju jei kitaip neiseina ispozicionuoti, nes pav. dabar labai sunku nustumti .containerContent'a and footer'i  */
     }
 
-    .containerHero > .clock {
-        display: inline-block;
-        width:100%;
-        /* background-color: rgb(204, 201, 13);   */
-    }
+        .containerHero > .logo{
+            display: inline-block;
+            /* background-color: rgb(25, 0, 255); */
+            padding: 2rem;  
+            width: 100px;
+        }
 
-        .containerHero > .clock > ul {
+        .containerHero > h1 {
             display: inline-block;
             width:100%;
-            list-style-type: none;
-            /* background-color: rgb(204, 13, 109);   */
+            /* background-color: rgb(204, 27, 136);   */
+            font-size: 4rem;
+            font-weight: 900;
+
         }
+
+        .containerHero > p {
+            display: inline-block;
+            width:100%;
+            /* background-color: rgb(0, 255, 21);   */
+            color: grey;
+            font-size: 1.1rem;
+            padding-top:2rem;
+            padding-bottom:2rem;
+        }
+
+        .containerHero > .clock {
+            display: inline-block;
+            width:100%;
+            /* background-color: rgb(204, 201, 13);   */
+        }
+
+            .containerHero > .clock > ul {
+                display: inline-block;
+                width:100%;
+                list-style-type: none;
+                /* background-color: rgb(204, 13, 109);   */
+            }
 
                 .containerHero > .clock > ul >li {
                     display: inline-block;
@@ -66,49 +80,144 @@ body{
                     text-transform: uppercase; 
                 }
 
-                .containerHero > .clock > ul >li >span {
-                    display: block;
-                    /* background-color: rgb(80, 13, 204);   */
-                    color:white;
-                    padding: 0.5rem;
-                    padding-left:2rem;
-                    padding-right:2rem;
-                    font-size: 3.5rem;
-                    font-family: Orbitron, raleway, sans-serif;
-                }
-
-
-    .containerHero > .subscribeForm {
-        display: inline-block;
-        width:100%;
-        padding:2rem;
-        /* background-color: rgb(241, 15, 91);   */
-    }
-
-            .containerHero > .subscribeForm > form >input {
-                display: inline-block;
-                width:97%;
-                line-height: 2rem;
-                font-size:1.2rem;
-                border: none;
-                border-bottom: 10px;
-                border-bottom: 2px solid #ccc; /* all three parameters are important here and all three have to be written down in this order */
-                background-color: rgba(255, 255, 255, 0);
-                color:white;
+                    .containerHero > .clock > ul >li > span {
+                        display: block;
+                        /* background-color: rgb(80, 13, 204);   */
+                        color:white;
+                        padding: 0.5rem;
+                        padding-left:2rem;
+                        padding-right:2rem;
+                        font-size: 3.5rem;
+                        font-family: Orbitron, raleway, sans-serif;                        
+            }
+            .containerHero > .clock > ul >li:last-of-type > span{
+               background-color: tomato;
+            
+                position: relative;
+                animation: countdown 3s;
+                /* animation-direction: normal; */
             }
 
-    .containerHero > .mouse {
-        display: inline-block;
-        background-color: rgb(243, 62, 17); 
-        width:25px;
-        height:50px;
+
+@keyframes countdown {
+0%   {content: "59";}
+50% {content: "58";}
+100% {content: "57";}
+}
+
+
+        .containerHero > .subscribeForm {
+            display: inline-block;
+            width:100%;
+            padding:1rem;
+            /* background-color: rgb(241, 15, 91);   */
+        }
+
+                .containerHero > .subscribeForm > form >input {
+                    display: inline-block;
+                    width:95%;
+                    line-height: 2rem;
+                    font-size:1.2rem;
+                    border: none;
+                    border-bottom: 10px;
+                    border-bottom: 2px solid #ccc; /* all three parameters are important here and all three have to be written down in this order */
+                    background-color: rgba(255, 255, 255, 0);
+                    color:white;
+                }
+
+                .containerHero > .subscribeForm > form > .btn {
+                    display: inline-block;
+                    margin-top: 1rem;  
+                }
+
+        .containerHero > .mouse {
+            display: inline-block;
+            border: 2px solid white;
+            border-radius: 12px;
+            width:26px;
+            height:50px;
+        }
+
+            .containerHero > .mouse > .wheel {
+                display: inline-block;
+                width: 2px;        
+                height:10px;
+                background-color: white;
+                position: relative;
+                animation: wheelMove 2.5s infinite linear;
+                /* animation-direction: normal; */
+            }
+
+@keyframes wheelMove {
+0%   {background: rgba(255, 255, 255, 0.5); top: 0px;}
+50% {background: rgba(255, 255, 255, 1); top: 18px;}
+100% {background: rgba(255, 255, 255, 0.4); top: 36px;}
+}
+
+    .containerBgContent{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color:white;
     }
 
+        .topBtn{
+            position:absolute;
+            top: 115%;
+            left: 90%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: #E91E63;
+            color: white; 
+            box-shadow: 1px 1px 5px 1px grey;    
+            cursor: pointer;        
+        }
 
-    .containerHero > .btn {
-        display: inline-block;
-       margin: 2rem;    
-    }
+        .arrow{
+            position:absolute;
+            top: 40%;
+            left: 35%;
+            height: 15px;
+            width: 15px;
+            border:none;
+            border-left: 3px solid white;
+            border-top: 3px solid white;         
+            transform: rotate(45deg);           
+        }
+    
+        .containerContent{
+            display: inline-block;
+            width:1000px;
+            background-color: white;
 
+        }
+            .containerContent > .left{
+                display: inline-block;
+                width:50%;
+                float:left;
+            }
+
+            .containerContent > .right{
+                display: inline-block;
+                width:40%;
+                float:right;
+            }
+
+    .containerBgFooter{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #03A9F5;
+    }    
+
+        footer{
+            display: inline-block;
+            width:600px;
+            text-align: center;
+            background-color: #03A9F5;
+        }
 
 
