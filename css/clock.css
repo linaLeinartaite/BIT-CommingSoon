@@ -1,0 +1,216 @@
+        .containerHero > .clock {
+            display: inline-block;
+            width:100%;
+            /* background-color: rgb(204, 201, 13);   */
+        }
+
+            .containerHero > .clock > ul {
+                display: inline-block;
+                width:100%;
+                list-style-type: none;
+                /* background-color: rgb(204, 13, 109);   */
+            }
+
+                .containerHero > .clock > ul >li {
+                    display: inline-block;
+                    /* background-color: rgb(13, 204, 39);  */
+                    color: white;
+                    font-size: 1rem;
+                    text-transform: uppercase; 
+                }
+
+                    .containerHero > .clock > ul >li > span {
+                        display: block;
+                        color:white;
+                        padding: 0.5rem;
+                        padding-left:2rem;
+                        padding-right:2rem;
+                        font-size: 3.5rem;
+                        font-family: Orbitron, raleway, sans-serif;                        
+            }
+            .containerHero li:last-of-type > span{
+                position: relative;                
+            }
+
+.containerHero li:last-of-type > span:after{
+    content: "";
+    animation: countdownS 60s linear;
+    animation-iteration-count: 142560;
+    /* animation-direction: normal; */
+}
+
+@keyframes countdownS {
+    0%   {content: "00";}
+    1.666666667%   {content: "59";}
+    3.333333333%   {content: "58";}
+    5%   {content: "57";}
+    6.666667%   {content: "56";}
+    8.333333%   {content: "55";}
+    10%   {content: "54";}
+    11.666667%   {content: "53";}
+    13.333333%   {content: "52";}
+    15%   {content: "51";}
+    16.666667%   {content: "50";}
+    18.333333%   {content: "49";}
+    20%   {content: "48";}
+    21.666667%  {content: "47";}
+    23.333333%    {content: "46";}
+    25%   {content: "45";}
+    26.666667%  {content: "44";}
+    28.333333%    {content: "43";}
+    30%   {content: "42";}
+    31.666667%  {content: "41";}
+    33.333333%    {content: "40";}
+    35%   {content: "39";}
+    36.666667%  {content: "38";}
+    38.333333%    {content: "37";}
+    40%   {content: "36";}
+    41.666667%  {content: "35";}
+    43.333333%    {content: "34";}
+    45%   {content: "33";}
+    46.666667%  {content: "32";}
+    48.333333%    {content: "31";}
+    50%   {content: "30";}
+    51.666667%  {content: "29";}
+    53.333333%    {content: "28";}
+    55%   {content: "27";}
+    56.666667%  {content: "26";}
+    58.333333%    {content: "25";}
+    60%   {content: "24";}
+    61.666667%  {content: "23";}
+    63.333333%    {content: "22";}
+    65%   {content: "21";}
+    66.666667%  {content: "20";}
+    68.333333%    {content: "19";}
+    70%   {content: "18";}
+    71.666667%  {content: "17";}
+    73.333333%    {content: "16";}
+    75%   {content: "15";}
+    76.666667%  {content: "14";}
+    78.333333%    {content: "13";}
+    80%   {content: "12";}
+    81.666667%  {content: "11";}
+    83.333333%    {content: "10";}
+    85%   {content: "09";}
+    86.666667%  {content: "08";}
+    88.333333%    {content: "07";}
+    90%   {content: "06";}
+    91.666667%  {content: "05";}
+    93.333333%    {content: "04";}
+    95%   {content: "03";}
+    96.666667%  {content: "02";}
+    98.333333%    {content: "01";}
+    100% {content: "00";}
+    }
+   
+
+.containerHero li:nth-child(3) > span:after{
+    /* background-color: tomato; */
+    content: "";
+    animation: countdownM 3600s linear; /* ??? WHY duration time is twice shorter for first min ???? i.e. for */
+    animation-iteration-count: 2376;
+    /*60min to go down I need to set time for 120min*/
+    /* animation-direction: normal; */
+}
+
+@keyframes countdownM {
+    0%   {content: "00";}
+    0.027777778% {content: "59";} /* after firt sec minnutes change to 59*/
+    1.694444444%   {content: "58";} /*1.638889% === 59s */
+    3.361111111%   {content: "57";}
+    5.027777778%   {content: "56";}
+    6.694444444%   {content: "55";}
+    8.361111111%   {content: "54";}
+    10.02777778%   {content: "53";}
+    11.69444444%   {content: "52";}
+    13.36111111%   {content: "51";}
+    15.02777778%   {content: "50";}
+    16.69444444%   {content: "49";}
+    18.36111111%   {content: "48";}
+    20.02777778%   {content: "47";}
+    21.69444444%  {content: "46";}
+    23.36111111%    {content: "45";}
+    25.02777778%   {content: "44";}
+    26.69444444%  {content: "43";}
+    28.36111111%    {content: "42";}
+    30.02777778%   {content: "41";}
+    31.69444444%  {content: "40";}
+    33.36111111%    {content: "39";}
+    35.02777778%   {content: "38";}
+    36.69444444%  {content: "37";}
+    38.36111111%    {content: "36";}
+    40.02777778%   {content: "35";}
+    41.69444444%  {content: "34";}
+    43.36111111%    {content: "33";}
+    45.02777778%   {content: "32";}
+    46.69444444%  {content: "31";}
+    48.36111111%    {content: "30";}
+    50.02777778%   {content: "29";}
+    51.69444444%  {content: "28";}
+    53.36111111%    {content: "27";}
+    55.02777778%   {content: "26";}
+    56.69444444%  {content: "25";}
+    58.36111111%    {content: "24";}
+    60.02777778%   {content: "23";}
+    61.69444444%  {content: "22";}
+    63.36111111%    {content: "21";}
+    65.02777778%   {content: "20";}
+    66.69444444%  {content: "19";}
+    68.36111111%    {content: "18";}
+    70.02777778%   {content: "17";}
+    71.69444444%  {content: "16";}
+    73.36111111%    {content: "15";}
+    75.02777778%   {content: "14";}
+    76.69444444%  {content: "13";}
+    78.36111111%    {content: "12";}
+    80.02777778%   {content: "11";}
+    81.69444444%  {content: "10";}
+    83.36111111%    {content: "09";}
+    85.02777778%   {content: "08";}
+    86.69444444%  {content: "07";}
+    88.36111111%    {content: "06";}
+    90.02777778%   {content: "05";}
+    91.69444444%  {content: "04";}
+    93.36111111%    {content: "03";}
+    95.02777778%   {content: "02";}
+    96.69444444%  {content: "01";}
+    98.36111111%    {content: "00";}
+    100% {content: "00";} /**/
+    }
+
+
+.containerHero li:nth-child(2) > span:after{
+    /* background-color: tomato; */
+    content: "";
+    animation: countdownH 86400s linear; 
+    animation-iteration-count: 99;
+}
+
+@keyframes countdownH {
+    0%   {content: "00";}
+    0.001157407% {content: "23";} /* (1s) after first s it switches to 23*/
+    4.167824074%   {content: "22";} /* (1h) */
+    8.334490741%   {content: "21";} /*2h*/
+    12.50115741%   {content: "20";}
+    16.66782407%   {content: "19";}
+    20.83449074%  {content: "18";}
+    25.00115741%   {content: "17";}
+    29.16782407%   {content: "16";}
+    33.33449074%   {content: "15";}
+    37.50115741%   {content: "14";}
+    41.66782407%   {content: "13";}
+    45.83449074%   {content: "12";}
+    50.00115741%   {content: "11";}
+    54.16782407%  {content: "10";}
+    58.33449074%    {content: "09";}
+    62.50115741%   {content: "08";}
+    66.66782407%  {content: "07";}
+    70.83449074%    {content: "06";}
+    75.00115741%   {content: "05";}
+    79.16782407%  {content: "04";}
+    83.33449074%    {content: "03";}
+    87.50115741%   {content: "02";}
+    91.66782407%  {content: "01";}
+    95.83449074%    {content: "00";}
+    100%   {content: "00";}
+}
