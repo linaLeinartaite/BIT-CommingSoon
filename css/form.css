@@ -1,0 +1,77 @@
+/*
+This is the FIRST VERSION OF FORM (without FLOATING LABEL!!)
+*/
+
+
+    .containerHero > .subscribeForm {
+        display: inline-block;
+        width:100%;
+        padding:3.5rem 0;
+    /* background-color: rgb(241, 15, 91);   */
+
+} 
+
+/*        .containerHero > .subscribeForm > form >input {
+            display: inline-block;
+            width:100%;
+            line-height: 2rem;
+            font-size:1.2rem;
+            border: none;
+            /*border-bottom: 10px; */
+/*            border-bottom: 1px solid white; /* all three parameters are important here and all three have to be written down in this order */
+/*            background-color: rgba(255, 255, 255, 0);
+            color:white;
+        }
+
+        .containerHero input::placeholder { /*!!!!!!!!!!!*/
+/*            color: white;
+            opacity: 1;
+            font-size:0.9rem;
+            position:relative;
+        }
+
+        .containerHero >.subscribeForm > form > label { /*!!!!!!!!!!!*/
+/*           display: none;
+        }  
+*/
+
+/* 
+SECOND VERSION OF FORM (WITH FLOATING LABEL)
+!!! html is also changed acordingly
+*/
+
+.floatContainer {
+    display: inline-block;
+    width: 95%;
+    border-bottom: solid 1px white;
+    padding: 0 8px;
+    position: relative;
+  }
+
+        .floatContainer input {
+            color:white;
+            display:inline-block;
+            width: 100%;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            line-height: 2rem;
+            font-size:1.2rem;
+            margin: 16px -10px 10px;
+            outline: 0;
+        }
+
+    label {
+        color:white;
+        line-height: 2rem;
+        font-size:1.2rem;
+        position: absolute;
+        transform-origin: top left;
+        transform: translate(-20px, 16px) scale(1);
+        transition: all .1s ease-in-out;
+    }
+  
+  .floatContainer.active label {
+    transform: translate(-20px, -4px) scale(.75);
+  }
+        
+        

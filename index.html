@@ -10,7 +10,7 @@
     <!--3rd party css-->
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     
-    <!--komonentai-->
+    <!--komponentai-->
     <link rel="stylesheet" href="./css/mouse.css">
     <link rel="stylesheet" href="./css/progress-bar.css">
     <link rel="stylesheet" href="./css/button.css">
@@ -52,8 +52,17 @@
             </div>
             <div class="subscribeForm">
                 <form method="post" action="./index.html">
-                    <label for="email" style="display:none;">Type your email</label>
+<!--FIRST VERSION OF FORMs input
+                    <label for="email">Type your email</label>
                     <input type="email" placeholder="Type your email" name="email">
+-->
+<!--SECOND VERSION below:-->
+<div id="floatContainer" class="floatContainer">    
+    <label for="floatLabel">Type your email</label>
+    <input id="floatLabel" type="text">
+  </div>
+
+
                     <div class="btn">
                         subscribe now
                     </div>
@@ -133,5 +142,6 @@
                 <p>Matrox pack includes complete websites not just homepages, it comes with full website demos. Over 200+ ready html files only for 17$. Purchase <a href="#">Matrox</a> Now!</p>
             </footer>
         </div>
+        <script src='script.js'></script>
     </body>
     </html>
