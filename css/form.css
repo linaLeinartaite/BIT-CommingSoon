@@ -57,8 +57,15 @@ SECOND VERSION OF FORM (WITH FLOATING LABEL)
             line-height: 2rem;
             font-size:1.2rem;
             margin: 16px -10px 10px;
-            outline: 0;
+            outline: none;
         }
+
+    /*this one bellow doe not work!!! should I overwrite it differently???*/   
+        .error {
+            border: none;
+        }
+
+       
 
     label {
         color:white;
